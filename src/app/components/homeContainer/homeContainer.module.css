@@ -1,0 +1,70 @@
+.homeContainer {
+  margin-top: 20px;
+  background-color: #34495E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeContainer .sectionOne {
+  margin-top: 30px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.homeContainer .sectionOne span {
+  padding-right: 6px;
+}
+
+.homeContainer .sectionOne span:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.homeContainer .sectionTwo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100vW;
+  margin-right: 12px;
+  overflow-wrap: break-word;
+  color: #ffffff;
+  text-align: center;
+}
+
+.homeContainer .sectionTwo .card {
+  width: 21%;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.homeContainer .sectionTwo .card:hover {
+  background-color: #062346;
+  cursor: pointer;
+}
+
+.homeContainer .sectionTwo .card .img {
+  width: inherit;
+  height: 100%;
+}
+
+.homeContainer .sectionTwo .card h5 {
+  font-size: 1.2em;
+  font-weight: 100;
+  text-transform: capitalize;
+  line-height: 1.4em;
+}
+
+.homeContainer .sectionTwo .card p {
+  font-size: 0.8125em;
+  text-transform: capitalize;
+  font-weight: 100;
+}

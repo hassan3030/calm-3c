@@ -1,0 +1,87 @@
+@mixin hovering($opacity, $scale) {
+    transform        : scale($scale);
+    -webkit-transform: scale($scale);
+    -moz-transform   : scale($scale);
+    -ms-transform    : scale($scale);
+    -o-transform     : scale($scale);
+    opacity          : $opacity;
+}
+
+@mixin riduse($rid) {
+    border-radius        : $rid;
+    -webkit-border-radius: $rid;
+    -moz-border-radius   : $rid;
+    -ms-border-radius    : $rid;
+    -o-border-radius     : $rid;
+}
+
+.hometag {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-around;
+    margin-top     : 20px;
+
+    div h3 {
+        font-size  : 1.5em;
+        color      : #c0c0c0;
+        font-weight: 400;
+    }
+
+    div p {
+        color: #c0c0c0;
+    }
+
+    .icons {
+        display        : flex;
+        flex-direction : row;
+        justify-content: space-around;
+        width          : 300px;
+        margin-left    : -8px;
+
+        span {
+            display      : inline-block;
+            width        : 40px;
+            height       : 40px;
+            text-align   : center;
+            align-content: center;
+            font-size    : large;
+            color        : #ffffff;
+            @include riduse(3px);
+
+            &:hover {
+                @include hovering(0.9, 1.1)
+            }
+        }
+
+        & span:nth-child(1) {
+            background: #39579D url(../../images/icon1.png) no-repeat center
+        }
+
+        & span:nth-child(2) {
+            background: #02B3E9 url(../../images/icon2.png) no-repeat center
+        }
+
+        & span:nth-child(3) {
+            background: #DB4A39 url(../../images/icon3.png) no-repeat center
+        }
+
+        & span:nth-child(4) {
+            background: #EA4C89 url(../../images/icon4.png) no-repeat center
+        }
+
+        & span:nth-child(5) {
+            background: #5A872A url(../../images/icon5.png) no-repeat center
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .hometag {
+        display        : flex;
+        flex-direction : column;
+        justify-content: space-around;
+        align-items    : center;
+        text-align: center;
+    }
+
+}

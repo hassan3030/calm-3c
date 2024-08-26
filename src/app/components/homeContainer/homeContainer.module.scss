@@ -1,0 +1,71 @@
+@mixin hovering($opacity, $scale) {
+    transform        : scale($scale);
+    -webkit-transform: scale($scale);
+    -moz-transform   : scale($scale);
+    -ms-transform    : scale($scale);
+    -o-transform     : scale($scale);
+    opacity          : $opacity;
+}
+
+.homeContainer{
+    margin-top: 20px;
+    background-color: #34495E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .sectionOne{
+        margin-top: 30px;
+        color: #ffffff;
+        text-align: center;
+       span{
+        padding-right: 6px;
+        &:hover{
+            @include hovering(.9 , 1.2);
+            cursor: pointer;
+            
+        }
+       }
+    }
+    .sectionTwo{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content:center;
+     margin-top: 30px;
+     width: 100vW;
+     margin-right: 12px;
+     overflow-wrap:break-word ;
+     color: #ffffff;
+     text-align: center;
+     .card{
+        width: 21%;
+        margin-top: 30px;
+        margin-left: 10px;
+
+        &:hover{
+            background-color: #062346;
+            cursor: pointer;
+         }
+        .img{
+            width: inherit;
+            height: 100%;
+           
+}
+ h5{
+    font-size: 1.2em;
+    font-weight: 100;
+    text-transform: capitalize;
+    line-height: 1.4em;
+ }
+ p{
+    font-size: 0.8125em;
+    text-transform: capitalize;
+    font-weight: 100; 
+ }
+     }
+    }
+
+   
+}
+
